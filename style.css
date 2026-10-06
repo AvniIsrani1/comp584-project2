@@ -48,27 +48,27 @@ div img {
 /* Add background colors to see how much space each column is taking */
 
 .col-1 {
-  background-color: #a3cdd9;
+  background-color: #fff5c1;
 }
 
 .col-2 {
-  background-color: #fffce6;
+  background-color: #c3e5ff;
 }
 
 .col-3 {
-  background-color: #d42c2c;
+  background-color: #ffbdf2;
 }
 
 .col-4 {
-  background-color: #7674f4;
+  background-color: #e1afff;
 }
 
 .col-5 {
-  background-color: #adffba;
+  background-color: #b4ffcb;
 }
 
 .col-6 {
-  background-color: #f89cff;
+  background-color: #ffd49c;
 }
 
 /* Tablet Landscape Screen Sizes */
