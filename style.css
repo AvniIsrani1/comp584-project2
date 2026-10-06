@@ -5,81 +5,128 @@ html {
 }
 /* inherit border-box on all elements in the universe and before and after
  */
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 body {
-	font-family: Arial, Geneva, sans-serif;
+  font-family: Arial, Geneva, sans-serif;
 }
 a {
-	color: #2772B0;
+  color: #2772b0;
 }
 .wrapper {
-	width: 97%;
-	max-width: 1200px;
-	margin: 0 auto;
-	float: none;
-	background-color: #fff;
+  width: 97%;
+  max-width: 1200px;
+  margin: 0 auto;
+  float: none;
+  background-color: #fff;
 }
 
 div img {
-	width: 100%;
-	max-width: 225px; 
+  width: 100%;
+  max-width: 225px;
 }
 
 /* grid system -- mobile first! */
 /* flex contatiner */
 
 .row {
-	display: flex;
-	flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* attribute selector to give some margin between columns and apply styles to flex items */
 
 [class*="col-"] {
-	margin-left: 4%;
-	flex: 0 0 92%;
+  margin-left: 4%;
+  flex: 0 0 92%;
 }
 
 /* Add background colors to see how much space each column is taking */
 
 .col-1 {
-	background-color: #A3CDD9;
+  background-color: #a3cdd9;
 }
 
 .col-2 {
-	background-color: #FFFCE6;
+  background-color: #fffce6;
+}
+
+.col-3 {
+  background-color: #d42c2c;
+}
+
+.col-4 {
+  background-color: #7674f4;
+}
+
+.col-5 {
+  background-color: #adffba;
+}
+
+.col-6 {
+  background-color: #f89cff;
 }
 
 /* Tablet Landscape Screen Sizes */
-@media only screen and (min-width: 480px)  {
-	
+@media only screen and (min-width: 480px) {
   .col-1,
   .col-2 {
-		flex: 0 0 44%;
-	}
-  
-  
+    flex: 0 0 44%;
+  }
 
+  .row-3 .col-1 {
+    flex: 0 0 92%;
+  }
 
+  .row-5 .col-2 {
+    flex: 0 0 92%;
+    order: -1; /* put at beginning */
+  }
 
+  .col-6 {
+    flex: 0 0 28%;
+  }
+
+  .row-6 {
+    row-gap: 1em;
+  }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
-  
-  
- 	.col-1 {
-		flex: 0 0 20%;
-	}
-  
-  
-  
-	.col-2 {
-		flex: 0 0 44%;
-	}
+  /* four column layout, each one column wide */
+  .col-1 {
+    flex: 0 0 20%;
+  }
 
+  /* two column layout, each two columns wide */
+  .col-2 {
+    flex: 0 0 44%;
+  }
+
+  /* 3 column wide */
+  .col-3 {
+    flex: 0 0 68%;
+  }
+
+  /* 4 column wide */
+  .col-4 {
+    flex: 0 0 92%;
+  }
+
+  .row-3 .col-1 {
+    flex: 0 0 20%;
+  }
+
+  .row-5 .col-2 {
+    flex: 0 0 44%;
+    order: 0;
+  }
+
+  .col-6 {
+    flex: 0 0 12%;
+  }
 }
