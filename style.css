@@ -38,6 +38,11 @@ div img {
   flex-flow: row wrap;
 }
 
+/* more flex properties to apply to last row (6) */
+.row-6 {
+  flex-direction: row-reverse; /* reverse the order the items appear */
+  justify-content: flex-end; /* align to end (left side) so that row does not start with blank space */
+}
 /* attribute selector to give some margin between columns and apply styles to flex items */
 
 [class*="col-"] {
@@ -91,6 +96,9 @@ div img {
     flex: 0 0 28%;
   }
 
+  /* unique flex property */
+  /* row-gap adds a gap between wrapped flex items */
+  /* here, the gap is 1 em */
   .row-6 {
     row-gap: 1em;
   }
@@ -99,6 +107,9 @@ div img {
 @media only screen and (min-width: 768px) {
   /* four column layout, each one column wide */
   .col-1 {
+    /* flex grow (0=don't grow to take up leftover space) */
+    /* flex shrink (0=dont shrink if no room left) */
+    /* flex basis (20%=starting width in proportion to row width) */
     flex: 0 0 20%;
   }
 
@@ -123,10 +134,10 @@ div img {
 
   .row-5 .col-2 {
     flex: 0 0 44%;
-    order: 0;
+    order: 0; /* put back to normal default ordering */
   }
 
   .col-6 {
-    flex: 0 0 12%;
+    flex: 0 0 12%; /* (12+4) * 6 = 96*/
   }
 }
