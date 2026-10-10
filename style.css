@@ -28,6 +28,19 @@ a {
 div img {
   width: 100%;
   max-width: 225px;
+  display: block;
+  margin: 0 auto; /*center image*/
+}
+
+/*underline h1*/
+h1 {
+  text-decoration: underline;
+}
+/*center align h1, h2, and h3*/
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 /* grid system -- mobile first! */
@@ -48,6 +61,8 @@ div img {
 [class*="col-"] {
   margin-left: 4%;
   flex: 0 0 92%;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 /* Add background colors to see how much space each column is taking */
